@@ -25,7 +25,7 @@ export default {
       <img :src="card.card_images[0].image_url" alt="" />
       <div class="p-2">
         <h4>{{ card.name }}</h4>
-        <p>{{ card.archetype }}</p>
+        <p>{{ card.type }}</p>
       </div>
     </div>
   </div>
