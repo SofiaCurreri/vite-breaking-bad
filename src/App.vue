@@ -2,7 +2,14 @@
 import AppHeader from "./components/AppHeader.vue";
 import CardList from "./components/CardList.vue";
 
+import cardType from "./components/_cardtype";
+
 export default {
+  data() {
+    return {
+      cardType,
+    };
+  },
   components: { AppHeader, CardList },
 };
 </script>
@@ -12,6 +19,11 @@ export default {
 
   <main class="d-flex align-items-end">
     <div class="container">
+      <select id="card-type">
+        <option v-for="singleType in cardType" value="">
+          {{ singleType }}
+        </option>
+      </select>
       <CardList />
     </div>
   </main>
